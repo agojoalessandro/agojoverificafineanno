@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MezziautomaticiComponent } from './mezziautomatici/mezziautomatici.component';
 
 @NgModule({
@@ -10,7 +11,7 @@ import { MezziautomaticiComponent } from './mezziautomatici/mezziautomatici.comp
     MezziautomaticiComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, ReactiveFormsModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

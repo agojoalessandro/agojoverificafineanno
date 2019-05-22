@@ -1,2 +1,25 @@
 <h1>{{title}}</h1>
+<br>
+<form [formGroup] = "myForm" (ngSubmit) = "onSubmit()">
+  
+     Tipo: <input type = "text" [formControl] = "myForm.controls['tipo']" >
+     <div *ngIf="!myForm.controls['tipo'].valid;" class="alert alert-danger">"tipo" non valido</div>
+     <div *ngIf="myForm.controls['tipo'].hasError('required')" class="alert alert-danger">"tipo" è richiesto</div>
+
+  <br> 
+  Descrizione :  <input type = "text" [formControl] = "myForm.controls['descrizione']" >
+  <div *ngIf="!myForm.controls['descrizione'].valid" class="alert alert-danger">"descrizione" non valido</div>
+  <div *ngIf="myForm.controls['descrizione'].hasError('required')" class="alert alert-danger">"descrizione" è richiesto</div> <br>
+  
+  Tariffa :  <input type = "text" [formControl] = "myForm.controls['tariffa']" >
+  <div *ngIf="!myForm.controls['tariffa'].valid" class="alert alert-danger">"tariffa" non valido</div>
+  <div *ngIf="myForm.controls['tariffa'].hasError('required')" class="alert alert-danger">"tariffa" è richiesto</div> <br>
+ 
+  Valutazione Media :  <input type = "text" [formControl] = "myForm.controls['valutazionemedia']" >
+  <div *ngIf="!myForm.controls['valutazionemedia'].valid" class="alert alert-danger">"valutazione media" non valido</div>
+  <div *ngIf="myForm.controls['valutazionemedia'].hasError('required')" class="alert alert-danger">"valutazione media" è richiesto</div> <br>
+  
+  <button>Login</button>
+</form>
+
 <app-mezziautomatici></app-mezziautomatici>
