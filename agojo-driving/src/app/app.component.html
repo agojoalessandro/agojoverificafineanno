@@ -20,8 +20,9 @@
   <div *ngIf="!myForm.controls['valutazionemedia'].valid" class="alert alert-danger">"valutazione media" non valido</div>
   <div *ngIf="myForm.controls['valutazionemedia'].hasError('required')" class="alert alert-danger">"valutazione media" è richiesto</div> <br>
   
-  <button>Login</button>
+  <button >Login</button>
 </form>
 </div>
 
 <app-mezziautomatici></app-mezziautomatici>
+<app-driving-list [dr] = "arrayModelli"></app-driving-list>

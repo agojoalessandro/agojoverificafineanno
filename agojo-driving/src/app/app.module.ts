@@ -4,11 +4,13 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MezziautomaticiComponent } from './mezziautomatici/mezziautomatici.component';
+import { DrivingListComponent } from './driving-list/driving-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MezziautomaticiComponent
+    MezziautomaticiComponent,
+    DrivingListComponent
   ],
   imports: [
     BrowserModule, ReactiveFormsModule, FormsModule, NgbModule
