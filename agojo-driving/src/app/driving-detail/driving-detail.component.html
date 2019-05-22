@@ -1,0 +1,17 @@
+<ul class="mezzi">
+  <li *ngFor="let modello of modelli"
+    [class.selected]="modello === selectedModello"
+    (click)="onSelect(modello)">
+    <span class="badge">{{modello.tipo}}</span> {{modello.descrizione}} {{modello.tariffa}} {{modello.valutazionemedia}}
+  </li>
+</ul>
+<div *ngIf="selectedModello">
+
+  <h2>{{selectedModello.tipo | uppercase}} Dettagli</h2>
+  <div><span>descrizione: </span>{{selectedModello.descrizione}}</div>
+  <div><span>tariffa: </span>{{selectedModello.tariffa}}</div>
+  <div><span>valutazione media: </span>{{selectedModello.valutazionemedia}}</div>
+  
+</div>
+
+

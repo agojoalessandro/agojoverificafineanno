@@ -12,6 +12,8 @@ export class AppComponent {
   myForm: FormGroup;
   arrayModelli: modello[];
   input: modello;
+  modelli = modello;
+  selectedModello: modello;
   constructor(fb:FormBuilder){
     this.arrayModelli=new Array();
     this.myForm = fb.group({
@@ -35,5 +37,8 @@ export class AppComponent {
       this.arrayModelli.push(this.input);
       
     }
+  }
+  onSelect(modello: modello): void {
+    this.selectedModello = modello;
   }
 }
