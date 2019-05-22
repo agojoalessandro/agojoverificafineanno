@@ -1,5 +1,5 @@
 export class modello{
-    nome: string;
+    tipo: string;
     descrizione: string;
     tariffa: string;
     valutazionemedia : number;
